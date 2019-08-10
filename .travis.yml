@@ -2,6 +2,6 @@ language: java
 
 sudo: false
 
-before_install: cd Projectsync
+before_install: cd ProjectSync
 
 script: mvn clean verify 
