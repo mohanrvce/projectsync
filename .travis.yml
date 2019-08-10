@@ -1,0 +1,7 @@
+language: java
+
+sudo: false
+
+before_install: cd Projectsync
+
+script: mvn clean verify 
