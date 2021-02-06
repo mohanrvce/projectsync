@@ -5,14 +5,7 @@ import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/**
- * This program demonstrates how to establish database connection to Microsoft
- * SQL Server.
- * 
- * @author www.codejava.net
- *
- */
-public class TestSQLDatabaseConnection2 {
+public class TestSQLDatabaseConnectionSimple {
 
 	public static void main(String[] args) {
 
