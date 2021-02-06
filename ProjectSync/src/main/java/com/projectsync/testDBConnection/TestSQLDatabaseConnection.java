@@ -13,7 +13,7 @@ public class TestSQLDatabaseConnection {
 
 		try (Connection con = DriverManager.getConnection(connectionUrl); Statement stmt = con.createStatement();) {
 			createTable(stmt);
-			String SQL = "SELECT * FROM Products;";
+			String SQL = "SELECT * FROM Products_Test_JDBC_Connection;";
 			ResultSet resultSet = stmt.executeQuery(SQL);
 			displayRow(resultSet);
 		} catch (SQLException e) {
@@ -29,9 +29,9 @@ public class TestSQLDatabaseConnection {
 	}
 
 	private static void createTable(Statement stmt) throws SQLException {
-		stmt.execute("if exists (select * from sys.objects where name = 'Products')" + "drop table Products");
+		stmt.execute("if exists (select * from sys.objects where name = 'Products_Test_JDBC_Connection')" + "drop table Products_Test_JDBC_Connection");
 
-		String sql = "CREATE TABLE [Products](" + "[ProductID] [int] IDENTITY(1,1) NOT NULL,"
+		String sql = "CREATE TABLE [Products_Test_JDBC_Connection](" + "[ProductID] [int] IDENTITY(1,1) NOT NULL,"
 				+ "[Name] [varchar](30) NOT NULL," + "[ProductNumber] [nvarchar](25) NOT NULL,"
 				+ "[MakeFlag] [bit] NOT NULL," + "[FinishedGoodsFlag] [bit] NOT NULL," + "[Color] [nvarchar](15) NULL,"
 				+ "[SafetyStockLevel] [smallint] NOT NULL," + "[ReorderPoint] [smallint] NOT NULL,"
@@ -46,13 +46,13 @@ public class TestSQLDatabaseConnection {
 
 		stmt.execute(sql);
 
-		sql = "INSERT Products VALUES ('Adjustable Time','AR-5381','0','0',NULL,'1000','750','0.00','0.00',NULL,NULL,NULL,NULL,'0',NULL,NULL,NULL,NULL,NULL,'2008-04-30 00:00:00.000',NULL,NULL,'694215B7-08F7-4C0D-ACB1-D734BA44C0C8','2014-02-08 10:01:36.827') ";
+		sql = "INSERT Products_Test_JDBC_Connection VALUES ('Adjustable Time','AR-5381','0','0',NULL,'1000','750','0.00','0.00',NULL,NULL,NULL,NULL,'0',NULL,NULL,NULL,NULL,NULL,'2008-04-30 00:00:00.000',NULL,NULL,'694215B7-08F7-4C0D-ACB1-D734BA44C0C8','2014-02-08 10:01:36.827') ";
 		stmt.execute(sql);
 
-		sql = "INSERT Products VALUES ('ML Bottom Bracket','BB-8107','0','0',NULL,'1000','750','0.00','0.00',NULL,NULL,NULL,NULL,'0',NULL,NULL,NULL,NULL,NULL,'2008-04-30 00:00:00.000',NULL,NULL,'694215B7-08F7-4C0D-ACB1-D734BA44C0C8','2014-02-08 10:01:36.827') ";
+		sql = "INSERT Products_Test_JDBC_Connection VALUES ('ML Bottom Bracket','BB-8107','0','0',NULL,'1000','750','0.00','0.00',NULL,NULL,NULL,NULL,'0',NULL,NULL,NULL,NULL,NULL,'2008-04-30 00:00:00.000',NULL,NULL,'694215B7-08F7-4C0D-ACB1-D734BA44C0C8','2014-02-08 10:01:36.827') ";
 		stmt.execute(sql);
 
-		sql = "INSERT Products VALUES ('Mountain-500 Black, 44','BK-M18B-44','0','0',NULL,'1000','750','0.00','0.00',NULL,NULL,NULL,NULL,'0',NULL,NULL,NULL,NULL,NULL,'2008-04-30 00:00:00.000',NULL,NULL,'694215B7-08F7-4C0D-ACB1-D734BA44C0C8','2014-02-08 10:01:36.827') ";
+		sql = "INSERT Products_Test_JDBC_Connection VALUES ('Mountain-500 Black, 44','BK-M18B-44','0','0',NULL,'1000','750','0.00','0.00',NULL,NULL,NULL,NULL,'0',NULL,NULL,NULL,NULL,NULL,'2008-04-30 00:00:00.000',NULL,NULL,'694215B7-08F7-4C0D-ACB1-D734BA44C0C8','2014-02-08 10:01:36.827') ";
 		stmt.execute(sql);
 	}
 
