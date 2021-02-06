@@ -1,4 +1,5 @@
-- sql script doesnot creat springstudent user
+- sql script doesnot create springstudent user
+- delete user if present
 - assign db owner permissions to springstudent for all athe databases (insert, create, update, delete, etc)
 - check if table can be locked before inserting records and unlock after inserting records
 - cannot delete database. error message says db already in use
