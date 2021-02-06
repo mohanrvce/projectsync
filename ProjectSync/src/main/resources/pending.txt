@@ -1,0 +1,11 @@
+- sql script doesnot creat springstudent user
+- assign db owner permissions to springstudent for all athe databases (insert, create, update, delete, etc)
+- check if table can be locked before inserting records and unlock after inserting records
+- cannot delete database. error message says db already in use
+- analyze the script once
+- connection string
+- check multiple hibernate properties
+- secure connection
+- pagination
+- export
+- pdf option

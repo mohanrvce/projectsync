@@ -108,12 +108,14 @@
 		</dependency>
 
 		<!-- MySQL -->
+		<!-- 
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>${mysql.connector.version}</version>
 		</dependency>
-
+ 		-->
+ 
 		<!-- C3PO -->
 		<dependency>
 			<groupId>com.mchange</groupId>
