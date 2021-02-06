@@ -15,7 +15,7 @@ public class TestJdbc {
 			System.out.println("Connection successful!!!");
 			System.out.println("Connection Name: " + myConn);
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println("Exception occurred while testing JDBC connection: " + e.getStackTrace());
 		}
 	}
 }
