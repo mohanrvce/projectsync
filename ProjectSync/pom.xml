@@ -14,6 +14,7 @@
 
 		<hibernate.version>5.4.27.Final</hibernate.version>
 		<mysql.connector.version>8.0.23</mysql.connector.version>
+		<mssql.connector.version>9.2.0.jre8</mssql.connector.version>
 		<c3po.version>0.9.5.5</c3po.version>
 
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -22,6 +23,14 @@
 
 	<dependencies>
 
+		<!--  MS SQL JDBC Support -->
+		<!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
+		<dependency>
+		    <groupId>com.microsoft.sqlserver</groupId>
+		    <artifactId>mssql-jdbc</artifactId>
+		    <version>9.2.0.jre8</version>
+		</dependency>
+		
 		<!-- Spring MVC support -->
 		<dependency>
 			<groupId>org.springframework</groupId>
