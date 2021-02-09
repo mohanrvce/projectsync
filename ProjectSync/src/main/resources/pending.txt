@@ -10,3 +10,6 @@
 - pagination
 - export
 - pdf option
+- forgot password
+- change password
+- send email registration link
