@@ -16,7 +16,7 @@
 - remember me functionality
 - encrypt plain passwords in properties file
 - redirect 8080 to 8443
-- session management
+- session management (session id)
 - NGINX loadbalancer
 
 Notes:
