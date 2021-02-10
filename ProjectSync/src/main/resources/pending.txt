@@ -28,11 +28,11 @@ Update server.xml:
 
 		<!-- add below code to enable https -->
 		<!-- Generate Keystore file with validity of 4000 days -->
-		<!--  keytool -genkey -keystore keystore.keystore -alias aliasName -keyalg RSA -keysize 4096 -validity 4000  -->
+		<!--  keytool -genkey -keystore keystore.jks -alias aliasName -keyalg RSA -keysize 4096 -validity 4000  -->
 		<Connector port="8443" protocol="org.apache.coyote.http11.Http11NioProtocol" 
 		   		   maxThreads="150" SSLEnabled="true" scheme="https" secure="true"
-	               clientAuth="false" sslProtocol="TLS" keyAlias="aliasname"
-	               keystoreFile="C:\\dev\\keystore.keystore" keystorePass="initinit"/>
+	               clientAuth="false" sslProtocol="TLS" keyAlias="aliasname" sslEnabledProtocols="TLSv1.2"
+	               keystoreFile="C:\\dev\\keystore.jks" keystorePass="initinit"/>
 
 
 Add below statement at the end of web.xml to intercept http to https:
