@@ -6,10 +6,11 @@
 - analyze the script once
 - connection string
 - check multiple hibernate properties
-- secure connection
+- secure connection (TLS)
 - pagination
 - export
 - pdf option
 - forgot password
 - change password
 - send email registration link
+- remember me functionality
