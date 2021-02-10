@@ -17,3 +17,34 @@
 - encrypt plain passwords in properties file
 - redirect 8080 to 8443
 - session management
+- NGINX loadbalancer
+
+Notes:
+1. Enable SSL (Works intermittently)
+Update server.xml:
+------------------
+    	<!-- present by default: this will enable http -->
+    	<Connector connectionTimeout="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443"/>
+
+		<!-- add below code to enable https -->
+		<!-- Generate Keystore file with validity of 4000 days -->
+		<!--  keytool -genkey -keystore keystore.keystore -alias aliasName -keyalg RSA -keysize 4096 -validity 4000  -->
+		<Connector port="8443" protocol="org.apache.coyote.http11.Http11NioProtocol" 
+		   		   maxThreads="150" SSLEnabled="true" scheme="https" secure="true"
+	               clientAuth="false" sslProtocol="TLS" keyAlias="aliasname"
+	               keystoreFile="C:\\dev\\keystore.keystore" keystorePass="initinit"/>
+
+
+Add below statement at the end of web.xml to intercept http to https:
+--------------------------------------------------------------------
+		<security-constraint>
+			<web-resource-collection>
+				<web-resource-name>Entire Application</web-resource-name>
+				<url-pattern>/*</url-pattern>
+			</web-resource-collection>
+			<user-data-constraint>
+				<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+			</user-data-constraint>
+		</security-constraint>
+	
+	
