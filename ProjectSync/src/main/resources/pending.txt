@@ -18,6 +18,7 @@
 - redirect 8080 to 8443
 - session management (session id)
 - NGINX loadbalancer
+- CI/CD deployment (code check in to github must automatically build, deploy app in aws cloud or any free hosting service)
 
 Notes:
 1. Enable SSL (Works intermittently)
