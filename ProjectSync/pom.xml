@@ -9,7 +9,7 @@
 	<name>projectsync</name>
 
 	<properties>
-		<springframework.version>5.3.3</springframework.version>
+		<springframework.version>5.3.4</springframework.version>
 		<springsecurity.version>5.4.2</springsecurity.version>
 
 		<hibernate.version>5.4.28.Final</hibernate.version>
